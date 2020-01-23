@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.deveyjoelfinal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+      android:name=".MainApplication"
+	  android:exported="true"
+      android:label="@string/app_name"
+      android:icon="@mipmap/dog_bike1"
+      android:roundIcon="@mipmap/dog_bike1"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+        <activity
+            android:name=".DeveyJoelFinal"
+            android:theme="@style/SplashTheme"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
+          android:exported="true">
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+	  <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDIzN78z2xANmWFo2ZTkNx1gSRsguhgy4o"/>
+    </application>
+
+</manifest>
